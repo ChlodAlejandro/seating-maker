@@ -1,0 +1,19 @@
+{
+  "name": "seating-maker",
+  "version": "1.0.0",
+  "description": "A seating arrangement generator, which takes in variables from students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChlodAlejandro/seating-maker.git"
+  },
+  "author": "Chlod Alejandro",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ChlodAlejandro/seating-maker/issues"
+  },
+  "homepage": "https://github.com/ChlodAlejandro/seating-maker#readme"
+}
