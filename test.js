@@ -28,12 +28,20 @@ console.log("=== [COMPATIBILITIES] ===");
 for (var s = 0; s < randomStudents.length; s++) {
 	console.log("Compatibilities for student: " + randomStudents[s].id);
 	let student = randomStudents[s];
+	var bestStudent;
+	var bestStudentScore = 0;
 	for (var s2 = 0; s2 < randomStudents.length; s2++) {
 		if (s !== s2) {
 			let student2 = randomStudents[s2];
-			console.log(`${student.id} => ${student2.id}: ${student.getCompatibility(student2).toFixed(4)}`);
-			console.log(`${student2.id} => ${student.id}: ${student2.getCompatibility(student).toFixed(4)}`);
-			console.log(``);
+			var compat = student.getCompatibility(student2).toFixed(4);
+			console.log(`${student.id} => ${student2.id}: ${compat}`);
+			if (bestStudentScore < compat) {
+				bestStudent = student2.id;
+				bestStudentScore = compat;
+			}
 		}
 	}
+	console.log("");
+	console.log(`Best compatible with: \"${bestStudent}\" (${bestStudentScore})`);
+	console.log("");
 }
